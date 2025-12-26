@@ -8,7 +8,7 @@ import axios from "axios";
 
 // Global axios config
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://localhost:5001"; // Explicitly point to backend just in case proxy fails
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5001";
 
 function LenisScroll() {
   useEffect(() => {
